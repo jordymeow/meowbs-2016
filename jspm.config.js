@@ -1,12 +1,10 @@
 System.config({
   baseURL: "/",
   defaultJSExtensions: true,
-  transpiler: "babel",
-  babelOptions: {
-    "optional": [
-      "runtime",
-      "optimisation.modules.system"
-    ]
+  transpiler: "ts",
+  typescriptOptions: {
+    "sourceMap": false,
+    "tsconfig": true
   },
   paths: {
     "github:*": "jspm_packages/github/*",
@@ -25,9 +23,10 @@ System.config({
       }
     },
     "src": {
+      "defaultExtension": "ts",
       "meta": {
         "*.ts": {
-          "loader": "plugin-typescript"
+          "loader": "ts"
         }
       }
     }
@@ -40,17 +39,17 @@ System.config({
     "angular-forms": "npm:@angular/forms@2.1.2",
     "angular-platform-browser": "npm:@angular/platform-browser@2.1.2",
     "angular-platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@2.1.2",
-    "babel": "npm:babel-core@5.8.38",
-    "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.7",
     "es6-shim": "github:es-shims/es6-shim@0.35.1",
     "http": "npm:@angular/http@2.1.2",
     "jquery": "npm:jquery@3.1.1",
-    "plugin-typescript": "github:frankwallis/plugin-typescript@5.2.9",
     "reflect-metadata": "npm:reflect-metadata@0.1.8",
     "router": "npm:@angular/router@3.1.2",
     "rxjs": "npm:rxjs@5.0.0-rc.2",
     "sass": "github:mobilexag/plugin-sass@0.5.0",
+    "source-map-support": "npm:source-map-support@0.4.6",
+    "ts": "github:frankwallis/plugin-typescript@5.2.9",
+    "ts-runtime": "npm:babel-runtime@5.8.38",
     "zone.js": "npm:zone.js@0.6.26",
     "github:frankwallis/plugin-typescript@5.2.9": {
       "typescript": "npm:typescript@2.1.1"
@@ -96,6 +95,9 @@ System.config({
     },
     "github:jspm/nodelibs-process@0.1.2": {
       "process": "npm:process@0.11.9"
+    },
+    "github:jspm/nodelibs-querystring@0.1.0": {
+      "querystring": "npm:querystring@0.2.0"
     },
     "github:jspm/nodelibs-stream@0.1.0": {
       "stream-browserify": "npm:stream-browserify@1.0.0"
@@ -563,6 +565,17 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "inherits": "npm:inherits@2.0.1",
       "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:source-map-support@0.4.6": {
+      "assert": "github:jspm/nodelibs-assert@0.1.0",
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "child_process": "github:jspm/nodelibs-child_process@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "module": "github:jspm/nodelibs-module@0.1.0",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "querystring": "github:jspm/nodelibs-querystring@0.1.0",
+      "source-map": "npm:source-map@0.5.6"
     },
     "npm:source-map@0.5.6": {
       "process": "github:jspm/nodelibs-process@0.1.2"
