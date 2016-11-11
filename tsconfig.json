@@ -4,22 +4,14 @@
   },
   "compilerOptions": {
     "target": "es5",
-    "inlineSources": true,
     "module": "system",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": false,
-    "outDir": "app",
-    "noResolve": false,
-    "baseUrl": "./jspm_packages",
-    "paths": {
-      "@angular/*": [
-        "npm/@angular/*@2.0.0-beta.17"
-      ]
-    }
-
+    "noImplicitAny": false,
+    "removeComments": true,
+    "outDir": "app"
   },
   "include": [
     "src/*"
