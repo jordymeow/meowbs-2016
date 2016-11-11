@@ -27,7 +27,7 @@ System.config({
     "src": {
       "meta": {
         "*.ts": {
-          "loader": "typescript"
+          "loader": "plugin-typescript"
         }
       }
     }
@@ -46,12 +46,15 @@ System.config({
     "es6-shim": "github:es-shims/es6-shim@0.35.1",
     "http": "npm:@angular/http@2.1.2",
     "jquery": "npm:jquery@3.1.1",
+    "plugin-typescript": "github:frankwallis/plugin-typescript@5.2.9",
     "reflect-metadata": "npm:reflect-metadata@0.1.8",
     "router": "npm:@angular/router@3.1.2",
     "rxjs": "npm:rxjs@5.0.0-rc.2",
     "sass": "github:mobilexag/plugin-sass@0.5.0",
-    "typescript": "npm:typescript@2.1.1",
     "zone.js": "npm:zone.js@0.6.26",
+    "github:frankwallis/plugin-typescript@5.2.9": {
+      "typescript": "npm:typescript@2.1.1"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
