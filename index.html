@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 
+  <!-- JSPM -->
+  <script src="jspm_packages/system.js"></script>
+  <script src="jspm.config.js"></script>
+  <script>
+    System.import('./app/app');
+  </script>
+
   <!-- HEAD -->
   <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>MeowBS 2016</title>
-      <!-- <link href="css/style.css" rel="stylesheet"> -->
   </head>
 
   <!-- BODY -->
@@ -22,12 +28,5 @@
     <h2>The App</h2>
     <meowbs-app>Loading...</meowbs-app>
   </body>
-
-  <!-- JSPM -->
-  <script src="jspm_packages/system.js"></script>
-  <script src="jspm.config.js"></script>
-  <script>
-    System.import('app/app');
-  </script>
 
 </html>

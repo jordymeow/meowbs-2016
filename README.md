@@ -4,7 +4,7 @@ Bootstrap for single-page applications created and based on the tools and librar
 
 * NPM, JSPM
 * Angular 2, TypeScript
-* Less.js
+* SASS
 
 ## Why
 
@@ -20,14 +20,17 @@ It is not so easy to set-up such an environment at first so I wanted to make a p
 
 * The JS source code of the app is located in src/ (TypeScript files). Those files are automatically compiled to JS by Atom (atom-typescript) and added to app/.
 
-## Issues
+## Issues & to do
 
 * Using Atom: "Cannot find module jQuery". It's because atom-typescript looks into package.json (node_modules) while modules can be also in config.js (jspm_packages). More here: https://github.com/TypeStrong/atom-typescript/issues/472 and here: https://github.com/Microsoft/TypeScript/issues/5039.
 
-## Todo
+* Now, the .ts are compiled to .js through Atom Editor. If I load src (the TypeScript source files) instead of app (compiled JS) in the index.html, it doesn't work anymore and get this error: http://stackoverflow.com/questions/40504083/jspm-systemjs-cant-find-source-map-support-js.
 
-* LESS not set up yet. The plugin-less (https://github.com/systemjs/plugin-less) seems like an interesting option, but is it really?
-* Would be nice to make it work without Atom.
+* Contrary for SASS, it's loaded dynamically (and very slowly), maybe could use Atom to compile this to CSS when the SCSS is modified?
+
+* Should find a way to create a bundle with one .js and one .css.
+
+* Babel is not really used in this project, would be good to remove it.
 
 ## Questions
 
