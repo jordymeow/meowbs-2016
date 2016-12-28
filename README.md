@@ -22,9 +22,8 @@ It is not so easy to set-up such an environment at first so I wanted to make a p
 ## Issues & to do
 
 * Using Atom: "Cannot find module jQuery". It's because atom-typescript looks into package.json (node_modules) while modules can be also in config.js (jspm_packages). More here: https://github.com/TypeStrong/atom-typescript/issues/472 and here: https://github.com/Microsoft/TypeScript/issues/5039.
-* Contrary for SASS, it's loaded dynamically (and very slowly), maybe could use Atom to compile this to CSS when the SCSS is modified?
 * Should find a way to create a bundle with one .js and one .css.
-* Babel is not really used in this project, would be good to remove it.
+* Would me maybe better to use @empty for source-map-support? (http://stackoverflow.com/questions/40545542/why-is-systemjs-is-looking-for-source-map-support-js)
 
 ## Questions
 
